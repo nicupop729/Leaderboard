@@ -34,6 +34,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 .title-section {
   font-size: 40px;
 }
@@ -83,6 +84,7 @@
 .input {
   height: 30px;
   width: 100%;
+  border: 2px solid black;
 }
 
 .submit-btn {
