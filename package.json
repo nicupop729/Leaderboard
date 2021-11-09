@@ -1,0 +1,33 @@
+{
+  "name": "leaderboard",
+  "version": "1.0.0",
+  "description": "The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicupop729/Leaderboard.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nicupop729/Leaderboard/issues"
+  },
+  "homepage": "https://github.com/nicupop729/Leaderboard#readme",
+  "devDependencies": {
+    "css-loader": "^6.5.1",
+    "csv-loader": "^3.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.62.2",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "xml-loader": "^1.2.1"
+  }
+}
