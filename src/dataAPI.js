@@ -1,5 +1,7 @@
-const displayMsg = document.querySelector('.display-msg');
+// eslint-disable-next-line import/no-cycle
+import { populateContainer } from './index';
 
+const displayMsg = document.querySelector('.display-msg');
 const snakeGameID = 'DDoMF1efagARflNWqX7z';
 const addressAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
@@ -7,7 +9,6 @@ const renderMsg = (msg) => {
   displayMsg.textContent = msg;
 };
 
-// eslint-disable-next-line import/prefer-default-export
 export const sendNewData = (username, score) => {
   fetch(`${addressAPI}games/${snakeGameID}/scores/`, {
     method: 'POST',
@@ -27,4 +28,10 @@ export const sendNewData = (username, score) => {
     .catch((err) => {
       renderMsg(`Something went wrong ${err.message}. Try again`);
     });
+};
+
+export const receiveData = async () => {
+  const response = await fetch(`${addressAPI}games/${snakeGameID}/scores/`);
+  const data = await response.json();
+  populateContainer(data.result);
 };
