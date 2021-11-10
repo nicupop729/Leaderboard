@@ -2,7 +2,6 @@ import './style.css';
 // eslint-disable-next-line import/no-cycle
 import { sendNewData, receiveData } from './dataAPI';
 
-// eslint-disable-next-line import/prefer-default-export
 export const scoresContainer = document.querySelector('.scores-container');
 const nameInput = document.querySelector('.name-input');
 const scoreInput = document.querySelector('.score-input');
