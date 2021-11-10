@@ -90,3 +90,7 @@
 .submit-btn {
   align-self: flex-end;
 }
+
+.display-msg {
+  margin-top: 30px;
+}
