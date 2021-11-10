@@ -33,5 +33,6 @@ export const sendNewData = (username, score) => {
 export const receiveData = async () => {
   const response = await fetch(`${addressAPI}games/${snakeGameID}/scores/`);
   const data = await response.json();
-  populateContainer(data.result);
+  const sortedScores = data.result.sort((a, b) => a.score - b.score);
+  populateContainer(sortedScores);
 };
