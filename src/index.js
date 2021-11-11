@@ -1,27 +1,36 @@
 import './style.css';
+// eslint-disable-next-line import/no-cycle
+import { sendNewData, receiveData } from './dataAPI';
 
-const scoresContainer = document.querySelector('.scores-container');
+export const scoresContainer = document.querySelector('.scores-container');
+const nameInput = document.querySelector('.name-input');
+const scoreInput = document.querySelector('.score-input');
+const addScoreBtn = document.querySelector('.submit-btn');
+const refreshBtn = document.querySelector('.refresh-btn');
 
-const dataArr = [
-  {
-    name: 'John Doe',
-    score: 100,
-  },
-  {
-    name: 'Annonym Annonymus',
-    score: 78,
-  },
-  {
-    name: 'Marcer Prousac',
-    score: 99,
-  },
-];
-
-const populateContainer = (value) => {
+export const populateContainer = (value) => {
   value.forEach((el) => {
-    const textHtml = `<p class="specific-score">${el.name}&#58; ${el.score}</p>`;
+    const textHtml = `<li class="specific-score">${el.user}&#58; ${el.score}</li>`;
     scoresContainer.insertAdjacentHTML('afterbegin', textHtml);
   });
 };
 
-populateContainer(dataArr);
+const addScoreFunc = () => {
+  sendNewData(nameInput.value, scoreInput.value);
+  nameInput.value = '';
+  scoreInput.value = '';
+};
+
+window.onload = () => {
+  receiveData();
+
+  addScoreBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    addScoreFunc();
+  });
+
+  refreshBtn.addEventListener('click', () => {
+    scoresContainer.innerHTML = '';
+    receiveData();
+  });
+};
