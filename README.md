@@ -16,7 +16,7 @@ All data is preserved thanks to the external Leaderboard API service.
 
 ## Live Demo
 
-[Live Demo Link](leaderboard-snake-game.netlify.app)
+[Live Demo Link](https://leaderboard-snake-game.netlify.app/)
 
 ## Getting Started
 
