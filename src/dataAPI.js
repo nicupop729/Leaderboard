@@ -1,13 +1,9 @@
 // eslint-disable-next-line import/no-cycle
 import { populateContainer } from './index';
+import { renderError, renderSucces } from './render-message';
 
-const displayMsg = document.querySelector('.display-msg');
 const snakeGameID = 'DDoMF1efagARflNWqX7z';
 const addressAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
-
-const renderMsg = (msg) => {
-  displayMsg.textContent = msg;
-};
 
 export const sendNewData = (username, score) => {
   fetch(`${addressAPI}games/${snakeGameID}/scores/`, {
@@ -20,13 +16,13 @@ export const sendNewData = (username, score) => {
   })
     .then((data) => {
       if (data.ok) {
-        renderMsg('Succesfully added a new score');
+        renderSucces('Succesfully added a new score');
       } else {
-        throw new Error(`No response: ${data.status}`);
+        throw new Error('Please provide valid username and score');
       }
     })
     .catch((err) => {
-      renderMsg(`Something went wrong ${err.message}. Try again`);
+      renderError(`Something went wrong: ${err.message}. Try again`);
     });
 };
 

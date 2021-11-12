@@ -2,6 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Irish Grover', cursive, serif;
+}
+
+body {
+  background-image: url('./resources/snake-background.jpg');
+  background-size: 100vh;
+  background-repeat: round;
 }
 
 .header {
@@ -43,6 +50,12 @@
   height: 30px;
   width: 180px;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: rgb(207, 255, 74);
 }
 
 .scores-container {
@@ -50,6 +63,7 @@
   height: 80%;
   overflow-y: scroll;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 .specific-score {
@@ -60,8 +74,14 @@
   border: 1px solid grey;
 }
 
-.specific-score.specific-score:nth-child(2n) {
+.specific-score.specific-score:nth-child(2n + 1) {
   background-color: silver;
+}
+
+.add-score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .add-score-title {
@@ -82,15 +102,36 @@
 }
 
 .input {
+  padding-left: 10px;
   height: 30px;
   width: 100%;
   border: 2px solid black;
+  border-radius: 5px;
 }
 
 .submit-btn {
   align-self: flex-end;
 }
 
-.display-msg {
+.display-msg-error {
+  text-align: center;
   margin-top: 30px;
+  font-size: 30px;
+  color: #b30000;
+  padding: 10px;
+  background-color: antiquewhite;
+  border: 1px solid antiquewhite;
+  border-radius: 20px;
+}
+
+.display-msg-succes {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 20px;
+  color: green;
+  background-color: #fff;
+  border: 1px solid antiquewhite;
+  padding: 10px;
+  border-radius: 20px;
+  width: 400px;
 }
