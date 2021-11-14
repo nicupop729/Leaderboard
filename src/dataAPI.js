@@ -2,7 +2,7 @@
 import { populateContainer } from './index';
 import { renderError, renderSucces } from './render-message';
 
-const snakeGameID = 'DDoMF1efagARflNWqX7z';
+const snakeGameID = 'dyFFy2q2gVjjtQISw234';
 const addressAPI = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
 
 export const sendNewData = (username, score) => {
