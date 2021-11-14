@@ -6,7 +6,7 @@
 
 ![screenshot](./src/resources/leaderboard.jpg)
 
-All data is preserved thanks to the external Leaderboard API service.
+C
 
 ## Built With
 
