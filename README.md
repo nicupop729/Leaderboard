@@ -6,7 +6,6 @@
 
 ![screenshot](./src/resources/leaderboard.jpg)
 
-C
 
 ## Built With
 
