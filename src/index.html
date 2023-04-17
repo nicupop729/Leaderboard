@@ -27,11 +27,14 @@
       <section class="add-score-section sections">
         <h2 class="title-section add-score-title">Add your score</h2>
         <form class="form">
-          <input type="text" class="input name-input" placeholder="Your name" />
+          <input type="text" class="input name-input" placeholder="Your name"
+          minlength="3" maxlength="10" />
           <input
             type="number"
             class="input score-input"
             placeholder="Your score"
+            minlength="1"
+            maxlength="3"
           />
           <button type="submit" class="btn submit-btn">Submit</button>
         </form>
