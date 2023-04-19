@@ -2,11 +2,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Irish Grover', cursive, serif;
+  font-family: "Irish Grover", cursive, serif;
 }
 
 body {
-  background-image: url('./resources/snake-background.jpg');
+  background-image: url("./resources/snake-background.jpg");
   background-size: 100vh;
   background-repeat: round;
 }
@@ -55,11 +55,11 @@ body {
 
 .btn:hover,
 .btn:active {
-  background-color: rgb(207, 255, 74);
+  background-color: rgb(207 255 74, 20%);
   border-top-left-radius: 80px;
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 30px;
   transition: border-radius 0.2s;
 }
 
@@ -122,7 +122,7 @@ body {
   border-top-left-radius: 80px;
   border-bottom-right-radius: 80px;
   border-bottom-left-radius: 30px;
-  border-top-right-radius: 30px;
+  border-radius: 30px;
   transition: border-radius 2s;
 }
 
